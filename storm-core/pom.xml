@@ -168,13 +168,19 @@
             <resource>
                 <directory>../conf</directory>
             </resource>
+            <resource>
+                <directory>src/clj</directory>
+            </resource>
         </resources>
         <testResources>
             <testResource>
                 <directory>src/dev</directory>
             </testResource>
-            <testResource>
+            <!-- testResource>
                 <directory>test/resources</directory>
+            </testResource-->
+            <testResource>
+                <directory>test/clj</directory>
             </testResource>
         </testResources>
         <plugins>
@@ -193,7 +199,8 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>compile-clojure</id>
+<!--  <id>compile-clojure</id>  -->
+						<id>compile-clojure</id>                       
                         <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
@@ -237,7 +244,7 @@
                     <artifactSet>
                         <includes>
                             <include>org.apache.thrift:*</include>
-                            <include>odg.apache.storm:*</include>
+                            <include>org.apache.storm:*</include>
                         </includes>
                     </artifactSet>
 

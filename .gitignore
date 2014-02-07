@@ -28,3 +28,8 @@ target
 *.ipr
 *.iws
 .idea
+.settings
+.classpath
+.project
+*.log
+dependency-reduced-pom.xml
