@@ -224,6 +224,7 @@
                     </reportsDirectories>
                 </configuration>
             </plugin>
+            <!-- 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -280,7 +281,34 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
+		
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				
+				<executions>
+					<execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+		               <configuration>
+		                    <descriptorRefs>
+		                        <descriptorRef>jar-with-dependencies</descriptorRef>
+		                    </descriptorRefs>
+							<finalName>${project.artifactId}-${project.version}</finalName>
+		                    <archive>
+		                        <manifest>
+		                            <mainClass></mainClass>
+		                        </manifest>
+		                    </archive>
+		                    
+		                </configuration>
+					</execution>
+				</executions>
+			</plugin>
+		 	-->
+ 			
         </plugins>
     </build>
 </project>
