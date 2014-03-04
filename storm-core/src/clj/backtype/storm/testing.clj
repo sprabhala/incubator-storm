@@ -181,7 +181,7 @@
       (catch Exception e (log-message (.getMessage e)))) ;; on windows, the host process still holds lock on the logfile
     ))
 
-(def TEST-TIMEOUT-MS 5000)
+(def TEST-TIMEOUT-MS 10000)
 
 (defmacro while-timeout [timeout-ms condition & body]
   `(let [end-time# (+ (System/currentTimeMillis) ~timeout-ms)]

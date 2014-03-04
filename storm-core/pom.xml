@@ -20,7 +20,7 @@
     <parent>
         <artifactId>storm</artifactId>
         <groupId>org.apache.storm</groupId>
-        <version>0.9.1-incubating-SNAPSHOT</version>
+        <version>0.9.1-noshade</version>
     </parent>
     <groupId>org.apache.storm</groupId>
     <artifactId>storm-core</artifactId>
@@ -199,7 +199,6 @@
                 </configuration>
                 <executions>
                     <execution>
-<!--  <id>compile-clojure</id>  -->
 						<id>compile-clojure</id>                       
                         <phase>compile</phase>
                         <goals>
